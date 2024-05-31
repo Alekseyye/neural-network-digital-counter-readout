@@ -3,16 +3,15 @@
 
 Задача нейросети заключается в определении цифр на изображениях и сопоставлении им соответствующих значений. В случае, если цифру невозможно определить (например, когда барабан счётчика находится между двумя цифрами), нейросеть должна отсеивать изображение (присваивая ему значение NaN).
 
-## Problem to solve
-
-An image of a number between 0 and 9 should be recognized and converted to the corresponding digital value. One complicating issue is, that as the digits are comming from a rolling counter number, there are some pictures, which are not ambigious. In this case the result should be a "NaN", indicating, that this is not a full number.
-To solve this problem a neural network approach is used.
-
-The rolling counter meter looks like following:
+Счётчик выглядит следующим образом:
 
 <img src="./images/counter_complete.png" width="250">  
 
-The image is sliced into individual pictures, which are analysed by a neural network.
+Нейросеть ставит в соответствие каждому из полученных изображений одно из 11 значений: 10 цифр - от 0 до 9, или NaN
+
+
+
+
 
 ## Neural Network Approach
 
