@@ -9,16 +9,6 @@
 
 Нейросеть ставит в соответствие каждому из полученных изображений одно из 11 значений: 10 цифр - от 0 до 9, или NaN
 
-
-
-
-
-## Neural Network Approach
-
-Convolutional Neural Networks (CNN) are very promiment in image processing. Especially in classification of image content, e.g. identify objects (dog, cat, car, bike, ...) or classify hand written letters.
-
-Here a classic approach is used to classify the picture into 11 output classes representing the 10 digits from 0 to 9 and the "NaN". 
-
 | Picture        | Value           | Picture        | Value           | Picture        | Value           | Picture        | Value           |
 | ------------- |:-------------:| ------------- |:-------------:|------------- |:-------------:| ------------- |:-------------:|
 | <img src="./images/counter2.jpg" width="60"> | 2 | <img src="./images/counter6.jpg" width="60"> | 6 |<img src="./images/counter9.jpg" width="60"> | 9 | <img src="./images/counterNaN.jpg" width="60"> | NaN |
