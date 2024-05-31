@@ -13,14 +13,11 @@
 | ------------- |:-------------:| ------------- |:-------------:|------------- |:-------------:| ------------- |:-------------:|
 | <img src="./images/counter2.jpg" width="60"> | 2 | <img src="./images/counter6.jpg" width="60"> | 6 |<img src="./images/counter9.jpg" width="60"> | 9 | <img src="./images/counterNaN.jpg" width="60"> | NaN |
 
+Изображения нейросеть должна получать с изображения с камеры, наблюдающей за счётчиком. Из этого изображения "вырезаются" фрагменты, содержащие цифры, и далее обрабатываются нейросетью.
 
-### Labeled Training Data
+В папке приложен датасет с примерами (примерно по 150 для каждой из цифр, около 3700 для значения NaN). С помощью кода ImagePreparation они переведены в RGB-изображения с разрешением 32х20. С использованием этого датасета можно легко обучить нейросеть.
 
-The images are coming from a camera system described elsewhere ([Overview](https://github.com/jomjol/water-meter-measurement-system), [HW](https://www.thingiverse.com/thing:3238162), [SW](https://github.com/jomjol/water-meter-picture-provider)). One major effort is to label the pictures with the target value. The labeling is done by hand. For each digit about 150 images are collected. For the "NaN" category about 3700 images were taken. The picture are rescaled to 32x20 pixels with RGB color (3 channels).
-
-The resized pictures as well as the original pictures (zipped in file "data_raw_all.zip") are included in the dataset. The pictures are stored in a subfolder for each digit (and NaN).
-
-The criteria for "good" and "bad" images are described here: [Labeling-Criteria.md](Labeling-Criteria.md)
+Тренировка нейросети производится в ходе выполнения кода Train_CNN_Digital_Readout, реализованного с использованием библиотек TensorFlow и Keras (открытые библиотеки для машинного обучения и взаимодействия с нейросетями). На выходе получаем файл в формате .h5, который можно использовать далее в качестве вводного данного в требующем использования нейросети проекте (например, в программе для считывания данных с счётчика воды).
 
 ## Training the network
 
